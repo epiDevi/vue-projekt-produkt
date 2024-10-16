@@ -11,7 +11,11 @@
                 <p class="card__price">
                     {{ product.price }}
                 </p>
+                <footer class="footer">
+                <router-link :to="'/products/'+ product.id">Details ansehen</router-link>
+            </footer>
             </div>
+            
 
         </div>
     </div>
@@ -30,7 +34,7 @@ import { products } from '../data.js'
     background-color: white;
     padding: 2rem;
 }
-.card__name{
+.card__name, .card__price{
     margin-bottom: 1rem;
 }
 </style>

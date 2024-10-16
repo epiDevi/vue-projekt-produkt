@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
 import ProductListView from '../views/ProductListView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
+import ProductListItemView from '../views/ProductListItemView.vue'
 
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/:pathMatch(.*)',
       name: '404',
       component: NotFoundView
+    },
+    {
+      path: '/products/:productId',
+      name: 'productDetails',
+      component: ProductListItemView
     },
     {
       //path: '/about',
